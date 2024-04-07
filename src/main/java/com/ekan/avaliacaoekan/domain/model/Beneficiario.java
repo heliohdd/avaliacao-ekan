@@ -1,6 +1,6 @@
 package com.ekan.avaliacaoekan.domain.model;
 
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -35,11 +35,11 @@ public class Beneficiario {
 
 	@CreationTimestamp
 	@Column(nullable = false, columnDefinition = "datetime")
-	private LocalDateTime dataInclusao;
+	private OffsetDateTime dataInclusao;
 
 	@UpdateTimestamp
 	@Column(nullable = false, columnDefinition = "datetime")
-	private LocalDateTime dataAtualizacao;
+	private OffsetDateTime dataAtualizacao;
 
 	@JsonIgnore
 	@OneToMany(mappedBy = "beneficiario")
@@ -48,14 +48,70 @@ public class Beneficiario {
 	public Beneficiario() {
 	}
 
-	public Beneficiario(Long id, String nome, String telefone, String dataNascimento, LocalDateTime dataInclusao,
-			LocalDateTime dataAtualizacao) {
+	public Beneficiario(Long id, String nome, String telefone, String dataNascimento, OffsetDateTime dataInclusao,
+			OffsetDateTime dataAtualizacao) {
 		this.id = id;
 		this.nome = nome;
 		this.telefone = telefone;
 		this.dataNascimento = dataNascimento;
 		this.dataInclusao = dataInclusao;
 		this.dataAtualizacao = dataAtualizacao;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getTelefone() {
+		return telefone;
+	}
+
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
+	}
+
+	public String getDataNascimento() {
+		return dataNascimento;
+	}
+
+	public void setDataNascimento(String dataNascimento) {
+		this.dataNascimento = dataNascimento;
+	}
+
+	public OffsetDateTime getDataInclusao() {
+		return dataInclusao;
+	}
+
+	public void setDataInclusao(OffsetDateTime dataInclusao) {
+		this.dataInclusao = dataInclusao;
+	}
+
+	public OffsetDateTime getDataAtualizacao() {
+		return dataAtualizacao;
+	}
+
+	public void setDataAtualizacao(OffsetDateTime dataAtualizacao) {
+		this.dataAtualizacao = dataAtualizacao;
+	}
+
+	public List<Documento> getDocumentos() {
+		return documentos;
+	}
+
+	public void setDocumentos(List<Documento> documentos) {
+		this.documentos = documentos;
 	}
 
 	@Override
