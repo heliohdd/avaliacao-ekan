@@ -4,4 +4,6 @@ insert into beneficiario (id, nome, telefone, data_nascimento, data_inclusao, da
 
 insert into documento (id, tipo_documento, descricao, data_inclusao, data_atualizacao, beneficiario_id) values (1, 'RG', 'Normal', utc_timestamp, utc_timestamp, 1);
 insert into documento (id, tipo_documento, descricao, data_inclusao, data_atualizacao, beneficiario_id) values (2, 'CPF', 'Estrangeiro', utc_timestamp, utc_timestamp, 1);
-insert into documento (id, tipo_documento, descricao, data_inclusao, data_atualizacao, beneficiario_id) values (3, 'Passaporte', 'Inglês', utc_timestamp, utc_timestamp, 2);
+insert into documento (id, tipo_documento, descricao, data_inclusao, data_atualizacao, beneficiario_id) values (3, 'Passaporte', 'Inglês', utc_timestamp, utc_timestamp, 1);
+insert into documento (id, tipo_documento, descricao, data_inclusao, data_atualizacao, beneficiario_id) values (4, 'Passaporte', 'Espanhol', utc_timestamp, utc_timestamp, 1);
+insert into documento (id, tipo_documento, descricao, data_inclusao, data_atualizacao, beneficiario_id) values (5, 'Passaporte', 'Francês', utc_timestamp, utc_timestamp, 2);
